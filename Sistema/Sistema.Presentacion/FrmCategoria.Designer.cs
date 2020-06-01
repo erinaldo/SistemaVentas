@@ -34,6 +34,8 @@
             this.DgvListado = new System.Windows.Forms.DataGridView();
             this.lblTotal = new System.Windows.Forms.Label();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.TabGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
@@ -51,6 +53,8 @@
             // 
             // TabGeneral
             // 
+            this.TabGeneral.Controls.Add(this.btnBuscar);
+            this.TabGeneral.Controls.Add(this.txtBuscar);
             this.TabGeneral.Controls.Add(this.lblTotal);
             this.TabGeneral.Controls.Add(this.DgvListado);
             this.TabGeneral.Location = new System.Drawing.Point(4, 22);
@@ -101,6 +105,23 @@
             this.Seleccionar.Name = "Seleccionar";
             this.Seleccionar.ReadOnly = true;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(7, 42);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(379, 20);
+            this.txtBuscar.TabIndex = 2;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(393, 42);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,5 +148,7 @@
         private System.Windows.Forms.DataGridView DgvListado;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }
