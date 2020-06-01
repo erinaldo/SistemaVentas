@@ -41,23 +41,37 @@ namespace Sistema.Negocio
         }
     }
 
-    public static string Actualizar(int Id, string Nombre, string Descripcion)
+    public static string Actualizar(int Id, string NombreAnt, string Nombre, string Descripcion)
     {
-        DCategoria Datos = new DCategoria();
 
-        string Existe = Datos.Existe(Nombre);
-        if (Existe.Equals("1"))
-        {
-            return "La categoría ya existe";
-        }
-        else
-        {
-            Categoria Obj = new Categoria();
-            Obj.IdCategoria = Id;
-            Obj.Nombre = Nombre;
-            Obj.Descripcion = Descripcion;
-            return Datos.Actualizar(Obj);
-        }
+        DCategoria Datos = new DCategoria();
+            Categoria categoria = new Categoria();
+
+            if (NombreAnt.Equals(Nombre))
+            {
+                Categoria Obj = new Categoria();
+                Obj.IdCategoria = Id;
+                Obj.Nombre = Nombre;
+                Obj.Descripcion = Descripcion;
+                return Datos.Actualizar(Obj);
+            }
+            else
+            {
+                string Existe = Datos.Existe(Nombre);
+                if (Existe.Equals("1"))
+                {
+                    return "La categoría ya existe";
+                }
+                else
+                {
+                    Categoria Obj = new Categoria();
+                    Obj.IdCategoria = Id;
+                    Obj.Nombre = Nombre;
+                    Obj.Descripcion = Descripcion;
+                    return Datos.Actualizar(Obj);
+                }
+            }
+    
     }
 
     public static string Eliminar(int Id)
