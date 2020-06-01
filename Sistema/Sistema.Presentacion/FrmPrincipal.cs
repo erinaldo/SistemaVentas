@@ -103,5 +103,18 @@ namespace Sistema.Presentacion
                 childForm.Close();
             }
         }
+
+        private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frm = new FrmCategoria();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
     }
 }
