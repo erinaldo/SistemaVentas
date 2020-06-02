@@ -9,7 +9,7 @@ using Sistema.Entidades;
 
 namespace Sistema.Negocio
 {
-    class NArticulo
+    public class NArticulo
     {
         //Todas las funcones para comunicar con la capa datos 
         public static DataTable Listar()
