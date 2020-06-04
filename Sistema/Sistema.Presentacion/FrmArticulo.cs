@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sistema.Negocio;
 using System.Drawing.Imaging;
+using System.IO;
 namespace Sistema.Presentacion
 {
     public partial class FrmArticulo : Form
@@ -17,6 +18,7 @@ namespace Sistema.Presentacion
         private string RutaORigen;// para cargar la ruta de la imagen
         private string RutaDestino;
         private string Directorio = "D:\\SistemaVentas\\";//Direccion de donde esta la carpeta
+        private string NombreAnt;
         public FrmArticulo()
         {
             InitializeComponent();
@@ -79,6 +81,13 @@ namespace Sistema.Presentacion
             txtBuscar.Clear();
             txtNombre.Clear();
             txtId.Clear();
+            txtCodigo.Clear();
+            panelCodigo.BackgroundImage = null;
+            btnGuardarCodigo.Enabled = true;
+            txtPrecioVenta.Clear();
+            txtStock.Clear();
+            txtImagen.Clear();
+            picImagen.Image = null;
             txtDescripcion.Clear();
             btnInsertar.Visible = true;
             btnActualizar.Visible = false;
@@ -174,18 +183,28 @@ namespace Sistema.Presentacion
             try
             {
                 string Rpta = "";
-                if (cboCategoria.Text == string.Empty|| txtNombre.Text== string.Empty ||)
+                if (cboCategoria.Text == string.Empty|| txtNombre.Text== string.Empty ||txtPrecioVenta.Text== string.Empty || txtStock.Text==string.Empty)
                 {
                     this.MensajeError("Falta ingresa algunos datos, seran remarcados.");
+                    Erroricono.SetError(cboCategoria, "Seleccione una categoria.");
                     Erroricono.SetError(txtNombre, "Ingrese un nombre.");
+                    Erroricono.SetError(txtPrecioVenta, "Ingrese un precio.");
+                    Erroricono.SetError(txtStock, "Ingrese un stock inicial.");
+                        
+                   
                 }
                 else
                 {
-                    Rpta = NCategoria.Insertar(txtNombre.Text.Trim(), txtDescripcion.Text.Trim());
+                    Rpta = NArticulo.Insertar(Convert.ToInt32(cboCategoria.SelectedValue),txtCodigo.Text.Trim(),txtNombre.Text.Trim(),Convert.ToDecimal(txtPrecioVenta.Text),Convert.ToInt32(txtStock.Text),  txtDescripcion.Text.Trim(),txtImagen.Text.Trim());
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOK("Se inserto de forma correcta el registro");
-                        this.Limpiar();
+                        if (txtImagen.Text != string.Empty)
+                        {
+                            this.RutaDestino = this.Directorio + txtImagen.Text;
+                            File.Copy(this.RutaORigen, this.RutaDestino);
+                        }
+                    
                         this.Listar();
                     }
                     else
@@ -198,6 +217,46 @@ namespace Sistema.Presentacion
             {
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void DgvListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                this.Limpiar();
+                btnActualizar.Visible = true;
+                btnInsertar.Visible = false;
+                txtId.Text = Convert.ToString(DgvListado.CurrentRow.Cells["ID"].Value);
+                cboCategoria.SelectedValue= Convert.ToString(DgvListado.CurrentRow.Cells["idcategoria"].Value);
+                txtCodigo.Text = Convert.ToString(DgvListado.CurrentRow.Cells["Codigo"].Value);
+                this.NombreAnt= Convert.ToString(DgvListado.CurrentRow.Cells["Nombre"].Value);
+                txtNombre.Text= Convert.ToString(DgvListado.CurrentRow.Cells["Nombre"].Value);
+                txtPrecioVenta.Text= Convert.ToString(DgvListado.CurrentRow.Cells["Precio_Venta"].Value);
+                txtStock.Text= Convert.ToString(DgvListado.CurrentRow.Cells["Stock"].Value);
+                txtDescripcion.Text= Convert.ToString(DgvListado.CurrentRow.Cells["Descripcion"].Value);
+                string Imagen;
+                Imagen = Convert.ToString(DgvListado.CurrentRow.Cells["Imagen"].Value);
+                if (Imagen != string.Empty)
+                {
+                    picImagen.Image = Image.FromFile(this.Directorio + Imagen);
+                    txtImagen.Text = Imagen;
+
+                }else
+                {
+                    picImagen.Image = null;
+                    txtImagen.Text = "";
+                }
+
+                
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Seleccione desde la celda nombre." + "|  Error: " + ex.Message);
             }
         }
     }
