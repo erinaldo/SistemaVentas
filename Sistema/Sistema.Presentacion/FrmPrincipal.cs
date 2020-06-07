@@ -13,6 +13,12 @@ namespace Sistema.Presentacion
     public partial class FrmPrincipal : Form
     {
         private int childFormNumber = 0;
+        public int IdUsuario;
+        public int IdRol;
+        public string Nombre;
+        public string Rol;
+        public bool Estado;
+
 
         public FrmPrincipal()
         {
@@ -137,6 +143,59 @@ namespace Sistema.Presentacion
             FrmUsuario frm = new FrmUsuario();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            StBarrainferior.Text = "Usuario: " + this.Nombre;
+            MessageBox.Show("Bienvendo: " + this.Nombre,"Sistema de ventas",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if (this.Rol.Equals("Administrador"))
+            {
+                MnuAlmacen.Enabled = true;
+                MnuIngreso.Enabled = true;
+                MnuVentas.Enabled = true;
+                MnuAccesos.Enabled = true;
+                MnuConsultas.Enabled = true;
+                TsCompras.Enabled = true;
+                TsVentas.Enabled = true;
+
+            }
+            else
+            {
+                if (this.Rol.Equals("Vendedor"))
+                {
+                    MnuAlmacen.Enabled = false;
+                    MnuIngreso.Enabled = false;
+                    MnuVentas.Enabled = true;
+                    MnuAccesos.Enabled = false;
+                    MnuConsultas.Enabled = true;
+                    TsCompras.Enabled = false;
+                    TsVentas.Enabled = true;
+                }
+                else
+                {
+                    if (this.Rol.Equals("Almacenero"))
+                    {
+                        MnuAlmacen.Enabled = true;
+                        MnuIngreso.Enabled = true;
+                        MnuVentas.Enabled = false;
+                        MnuAccesos.Enabled = false;
+                        MnuConsultas.Enabled = true;
+                        TsCompras.Enabled = true;
+                        TsVentas.Enabled = false;
+                    }
+                    else
+                    {
+                        MnuAlmacen.Enabled = false;
+                        MnuIngreso.Enabled = false;
+                        MnuVentas.Enabled = false;
+                        MnuAccesos.Enabled = false;
+                        MnuConsultas.Enabled = false;
+                        TsCompras.Enabled = false;
+                        TsVentas.Enabled = false;
+                    }
+                }
+            } 
         }
     }
 }

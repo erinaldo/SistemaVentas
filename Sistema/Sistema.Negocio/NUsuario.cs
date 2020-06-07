@@ -22,11 +22,12 @@ namespace Sistema.Negocio
             DUsuario Datos = new DUsuario();
             return Datos.Buscar(Valor);
         }
-        public static DataTable Login(string Email,string Clave)
+        public static DataTable Login(string Email, string Clave)
         {
             DUsuario Datos = new DUsuario();
             return Datos.Login(Email, Clave);
         }
+
 
         public static string Insertar(int IdRol, string Nombre, string TipoDocumento, string NumDocumento, string Direccion, string Telefono, string Email, string Clave)
         {
