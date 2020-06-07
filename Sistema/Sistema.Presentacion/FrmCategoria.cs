@@ -102,6 +102,9 @@ namespace Sistema.Presentacion
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
             this.Listar();
+            
+           
+
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
