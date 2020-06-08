@@ -112,7 +112,9 @@ namespace Sistema.Presentacion
 
         private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmCliente frm = new FrmCliente();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void CategoriaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,6 +215,19 @@ namespace Sistema.Presentacion
                 Application.Exit();
             }
             
+        }
+
+        private void MnuIngreso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FrmProveedor frm = new FrmProveedor();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

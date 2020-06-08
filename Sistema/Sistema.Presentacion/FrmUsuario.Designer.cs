@@ -37,6 +37,22 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtNumDocumento = new System.Windows.Forms.TextBox();
+            this.CboTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CboRol = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -49,28 +65,12 @@
             this.DgvListado = new System.Windows.Forms.DataGridView();
             this.TabGeneral = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label4 = new System.Windows.Forms.Label();
-            this.CboRol = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CboTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.txtNumDocumento = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtClave = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Erroricono)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
             this.TabGeneral.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Erroricono
@@ -159,6 +159,151 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtClave);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Location = new System.Drawing.Point(540, 83);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(391, 222);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Acceso";
+            // 
+            // txtClave
+            // 
+            this.txtClave.Location = new System.Drawing.Point(89, 82);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(199, 20);
+            this.txtClave.TabIndex = 19;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(89, 45);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(199, 20);
+            this.txtEmail.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 129);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(380, 26);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "A: Para Insertar un usuario la clave es obligatoria\r\nPero para actualizar deje en" +
+    " blanco el campo clave y la clave no se actualizara";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Clave(A)";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 45);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Email(*)";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(173, 322);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(158, 20);
+            this.txtTelefono.TabIndex = 18;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(173, 285);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(303, 20);
+            this.txtDireccion.TabIndex = 17;
+            // 
+            // txtNumDocumento
+            // 
+            this.txtNumDocumento.Location = new System.Drawing.Point(173, 245);
+            this.txtNumDocumento.Name = "txtNumDocumento";
+            this.txtNumDocumento.Size = new System.Drawing.Size(158, 20);
+            this.txtNumDocumento.TabIndex = 16;
+            // 
+            // CboTipoDocumento
+            // 
+            this.CboTipoDocumento.FormattingEnabled = true;
+            this.CboTipoDocumento.Items.AddRange(new object[] {
+            "DNI",
+            "RUC",
+            "CEDULA",
+            "PASAPORTE"});
+            this.CboTipoDocumento.Location = new System.Drawing.Point(173, 185);
+            this.CboTipoDocumento.Name = "CboTipoDocumento";
+            this.CboTipoDocumento.Size = new System.Drawing.Size(158, 21);
+            this.CboTipoDocumento.TabIndex = 15;
+            this.CboTipoDocumento.Text = "DNI";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(48, 329);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Telefono";
+            this.label7.Click += new System.EventHandler(this.Label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(48, 292);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Direccion ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(48, 245);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Numero Documento";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Tipo Documento";
+            // 
+            // CboRol
+            // 
+            this.CboRol.FormattingEnabled = true;
+            this.CboRol.Location = new System.Drawing.Point(172, 94);
+            this.CboRol.Name = "CboRol";
+            this.CboRol.Size = new System.Drawing.Size(304, 21);
+            this.CboRol.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(48, 83);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Rol(*)";
             // 
             // label1
             // 
@@ -288,151 +433,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1153, 619);
             this.tabControl1.TabIndex = 1;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Rol(*)";
-            // 
-            // CboRol
-            // 
-            this.CboRol.FormattingEnabled = true;
-            this.CboRol.Location = new System.Drawing.Point(172, 94);
-            this.CboRol.Name = "CboRol";
-            this.CboRol.Size = new System.Drawing.Size(304, 21);
-            this.CboRol.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Tipo Documento";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 245);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Numero Documento";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 292);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Direccion ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(48, 329);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Telefono";
-            this.label7.Click += new System.EventHandler(this.Label7_Click);
-            // 
-            // CboTipoDocumento
-            // 
-            this.CboTipoDocumento.FormattingEnabled = true;
-            this.CboTipoDocumento.Items.AddRange(new object[] {
-            "DNI",
-            "RUC",
-            "CEDULA",
-            "PASAPORTE"});
-            this.CboTipoDocumento.Location = new System.Drawing.Point(173, 185);
-            this.CboTipoDocumento.Name = "CboTipoDocumento";
-            this.CboTipoDocumento.Size = new System.Drawing.Size(158, 21);
-            this.CboTipoDocumento.TabIndex = 15;
-            this.CboTipoDocumento.Text = "DNI";
-            // 
-            // txtNumDocumento
-            // 
-            this.txtNumDocumento.Location = new System.Drawing.Point(173, 245);
-            this.txtNumDocumento.Name = "txtNumDocumento";
-            this.txtNumDocumento.Size = new System.Drawing.Size(158, 20);
-            this.txtNumDocumento.TabIndex = 16;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(173, 285);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(303, 20);
-            this.txtDireccion.TabIndex = 17;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(173, 322);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(158, 20);
-            this.txtTelefono.TabIndex = 18;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtClave);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(540, 83);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(391, 222);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Acceso";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Clave(A)";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Email(*)";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 129);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(380, 26);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "A: Para Insertar un usuario la clave es obligatoria\r\nPero para actualizar deje en" +
-    " blanco el campo clave y la clave no se actualizara";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(89, 45);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(199, 20);
-            this.txtEmail.TabIndex = 18;
-            // 
-            // txtClave
-            // 
-            this.txtClave.Location = new System.Drawing.Point(89, 82);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(199, 20);
-            this.txtClave.TabIndex = 19;
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,12 +446,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Erroricono)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).EndInit();
             this.TabGeneral.ResumeLayout(false);
             this.TabGeneral.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
