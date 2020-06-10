@@ -67,14 +67,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnAnular = new System.Windows.Forms.Button();
-            this.chkSeleccionar = new System.Windows.Forms.CheckBox();
+            this.BtnAnular = new System.Windows.Forms.Button();
+            this.ChkSeleccionar = new System.Windows.Forms.CheckBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.DgvListado = new System.Windows.Forms.DataGridView();
             this.TabGeneral = new System.Windows.Forms.TabPage();
-            this.TapGeneral = new System.Windows.Forms.TabControl();
+            this.tabcontrol1 = new System.Windows.Forms.TabControl();
+            this.PanelMostrar = new System.Windows.Forms.Panel();
+            this.DgvMostrarDetalle = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtSubTotalD = new System.Windows.Forms.TextBox();
+            this.txtTotalImpuestoD = new System.Windows.Forms.TextBox();
+            this.txtTotalD = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Erroricono)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.PanelArticulos.SuspendLayout();
@@ -84,7 +93,9 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
             this.TabGeneral.SuspendLayout();
-            this.TapGeneral.SuspendLayout();
+            this.tabcontrol1.SuspendLayout();
+            this.PanelMostrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMostrarDetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // Erroricono
@@ -103,25 +114,26 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(364, 613);
+            this.btnCancelar.Location = new System.Drawing.Point(192, 558);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(140, 23);
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar ";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(201, 613);
+            this.btnInsertar.Location = new System.Drawing.Point(29, 558);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(140, 23);
             this.btnInsertar.TabIndex = 5;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.PanelArticulos);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.btnCancelar);
@@ -129,7 +141,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1181, 642);
+            this.tabPage2.Size = new System.Drawing.Size(1162, 591);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -143,7 +155,7 @@
             this.PanelArticulos.Controls.Add(this.btnFiltrarArticulos);
             this.PanelArticulos.Controls.Add(this.txtBuscarArticulo);
             this.PanelArticulos.Controls.Add(this.label11);
-            this.PanelArticulos.Location = new System.Drawing.Point(69, 210);
+            this.PanelArticulos.Location = new System.Drawing.Point(23, 146);
             this.PanelArticulos.Name = "PanelArticulos";
             this.PanelArticulos.Size = new System.Drawing.Size(1083, 310);
             this.PanelArticulos.TabIndex = 10;
@@ -213,6 +225,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.PanelArticulos);
             this.groupBox2.Controls.Add(this.txtTotalImpuesto);
             this.groupBox2.Controls.Add(this.txtTotal);
             this.groupBox2.Controls.Add(this.txtSubTotal);
@@ -226,7 +239,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(6, 132);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(940, 394);
+            this.groupBox2.Size = new System.Drawing.Size(1139, 420);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle";
@@ -292,8 +305,10 @@
             this.DgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvDetalle.Size = new System.Drawing.Size(902, 219);
             this.DgvDetalle.TabIndex = 19;
+            this.DgvDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDetalle_CellContentClick);
             this.DgvDetalle.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDetalle_CellDoubleClick);
             this.DgvDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDetalle_CellEndEdit);
+            this.DgvDetalle.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DgvDetalle_RowsRemoved);
             // 
             // btnVerArticulo
             // 
@@ -467,24 +482,26 @@
             this.Seleccionar.HeaderText = "Seleccionar";
             this.Seleccionar.Name = "Seleccionar";
             // 
-            // btnAnular
+            // BtnAnular
             // 
-            this.btnAnular.Location = new System.Drawing.Point(651, 506);
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(105, 23);
-            this.btnAnular.TabIndex = 6;
-            this.btnAnular.Text = "Anular";
-            this.btnAnular.UseVisualStyleBackColor = true;
+            this.BtnAnular.Location = new System.Drawing.Point(390, 506);
+            this.BtnAnular.Name = "BtnAnular";
+            this.BtnAnular.Size = new System.Drawing.Size(105, 23);
+            this.BtnAnular.TabIndex = 6;
+            this.BtnAnular.Text = "Anular";
+            this.BtnAnular.UseVisualStyleBackColor = true;
+            this.BtnAnular.Click += new System.EventHandler(this.BtnAnular_Click);
             // 
-            // chkSeleccionar
+            // ChkSeleccionar
             // 
-            this.chkSeleccionar.AutoSize = true;
-            this.chkSeleccionar.Location = new System.Drawing.Point(0, 512);
-            this.chkSeleccionar.Name = "chkSeleccionar";
-            this.chkSeleccionar.Size = new System.Drawing.Size(82, 17);
-            this.chkSeleccionar.TabIndex = 4;
-            this.chkSeleccionar.Text = "Seleccionar";
-            this.chkSeleccionar.UseVisualStyleBackColor = true;
+            this.ChkSeleccionar.AutoSize = true;
+            this.ChkSeleccionar.Location = new System.Drawing.Point(0, 512);
+            this.ChkSeleccionar.Name = "ChkSeleccionar";
+            this.ChkSeleccionar.Size = new System.Drawing.Size(82, 17);
+            this.ChkSeleccionar.TabIndex = 4;
+            this.ChkSeleccionar.Text = "Seleccionar";
+            this.ChkSeleccionar.UseVisualStyleBackColor = true;
+            this.ChkSeleccionar.CheckedChanged += new System.EventHandler(this.ChkSeleccionar_CheckedChanged);
             // 
             // btnBuscar
             // 
@@ -526,11 +543,14 @@
             this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListado.Size = new System.Drawing.Size(940, 423);
             this.DgvListado.TabIndex = 0;
+            this.DgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentClick);
+            this.DgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellDoubleClick);
             // 
             // TabGeneral
             // 
-            this.TabGeneral.Controls.Add(this.btnAnular);
-            this.TabGeneral.Controls.Add(this.chkSeleccionar);
+            this.TabGeneral.Controls.Add(this.PanelMostrar);
+            this.TabGeneral.Controls.Add(this.BtnAnular);
+            this.TabGeneral.Controls.Add(this.ChkSeleccionar);
             this.TabGeneral.Controls.Add(this.btnBuscar);
             this.TabGeneral.Controls.Add(this.txtBuscar);
             this.TabGeneral.Controls.Add(this.lblTotal);
@@ -538,28 +558,122 @@
             this.TabGeneral.Location = new System.Drawing.Point(4, 22);
             this.TabGeneral.Name = "TabGeneral";
             this.TabGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.TabGeneral.Size = new System.Drawing.Size(1181, 642);
+            this.TabGeneral.Size = new System.Drawing.Size(981, 576);
             this.TabGeneral.TabIndex = 0;
             this.TabGeneral.Text = "Listado";
             this.TabGeneral.UseVisualStyleBackColor = true;
             // 
-            // TapGeneral
+            // tabcontrol1
             // 
-            this.TapGeneral.Controls.Add(this.TabGeneral);
-            this.TapGeneral.Controls.Add(this.tabPage2);
-            this.TapGeneral.Location = new System.Drawing.Point(1, 2);
-            this.TapGeneral.Name = "TapGeneral";
-            this.TapGeneral.SelectedIndex = 0;
-            this.TapGeneral.Size = new System.Drawing.Size(1189, 668);
-            this.TapGeneral.TabIndex = 1;
+            this.tabcontrol1.Controls.Add(this.TabGeneral);
+            this.tabcontrol1.Controls.Add(this.tabPage2);
+            this.tabcontrol1.Location = new System.Drawing.Point(1, 2);
+            this.tabcontrol1.Name = "tabcontrol1";
+            this.tabcontrol1.SelectedIndex = 0;
+            this.tabcontrol1.Size = new System.Drawing.Size(1170, 617);
+            this.tabcontrol1.TabIndex = 1;
+            // 
+            // PanelMostrar
+            // 
+            this.PanelMostrar.BackColor = System.Drawing.Color.NavajoWhite;
+            this.PanelMostrar.Controls.Add(this.txtTotalD);
+            this.PanelMostrar.Controls.Add(this.txtTotalImpuestoD);
+            this.PanelMostrar.Controls.Add(this.txtSubTotalD);
+            this.PanelMostrar.Controls.Add(this.label14);
+            this.PanelMostrar.Controls.Add(this.label13);
+            this.PanelMostrar.Controls.Add(this.label12);
+            this.PanelMostrar.Controls.Add(this.button1);
+            this.PanelMostrar.Controls.Add(this.DgvMostrarDetalle);
+            this.PanelMostrar.Location = new System.Drawing.Point(214, 143);
+            this.PanelMostrar.Name = "PanelMostrar";
+            this.PanelMostrar.Size = new System.Drawing.Size(759, 395);
+            this.PanelMostrar.TabIndex = 7;
+            this.PanelMostrar.Visible = false;
+            this.PanelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // DgvMostrarDetalle
+            // 
+            this.DgvMostrarDetalle.AllowUserToAddRows = false;
+            this.DgvMostrarDetalle.AllowUserToDeleteRows = false;
+            this.DgvMostrarDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMostrarDetalle.Location = new System.Drawing.Point(3, 43);
+            this.DgvMostrarDetalle.Name = "DgvMostrarDetalle";
+            this.DgvMostrarDetalle.ReadOnly = true;
+            this.DgvMostrarDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvMostrarDetalle.Size = new System.Drawing.Size(746, 248);
+            this.DgvMostrarDetalle.TabIndex = 0;
+            this.DgvMostrarDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(707, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 34);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(551, 359);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Total";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(551, 333);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Total Impuesto";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(551, 305);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Subtotal";
+            // 
+            // txtSubTotalD
+            // 
+            this.txtSubTotalD.Enabled = false;
+            this.txtSubTotalD.Location = new System.Drawing.Point(643, 303);
+            this.txtSubTotalD.Name = "txtSubTotalD";
+            this.txtSubTotalD.Size = new System.Drawing.Size(100, 20);
+            this.txtSubTotalD.TabIndex = 11;
+            // 
+            // txtTotalImpuestoD
+            // 
+            this.txtTotalImpuestoD.Enabled = false;
+            this.txtTotalImpuestoD.Location = new System.Drawing.Point(643, 329);
+            this.txtTotalImpuestoD.Name = "txtTotalImpuestoD";
+            this.txtTotalImpuestoD.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalImpuestoD.TabIndex = 12;
+            // 
+            // txtTotalD
+            // 
+            this.txtTotalD.Enabled = false;
+            this.txtTotalD.Location = new System.Drawing.Point(643, 359);
+            this.txtTotalD.Name = "txtTotalD";
+            this.txtTotalD.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalD.TabIndex = 13;
             // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1196, 682);
-            this.Controls.Add(this.TapGeneral);
+            this.ClientSize = new System.Drawing.Size(1162, 616);
+            this.Controls.Add(this.tabcontrol1);
             this.Name = "FrmIngreso";
             this.Text = "Ingresos";
             this.Load += new System.EventHandler(this.FrmIngreso_Load);
@@ -576,7 +690,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).EndInit();
             this.TabGeneral.ResumeLayout(false);
             this.TabGeneral.PerformLayout();
-            this.TapGeneral.ResumeLayout(false);
+            this.tabcontrol1.ResumeLayout(false);
+            this.PanelMostrar.ResumeLayout(false);
+            this.PanelMostrar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMostrarDetalle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -584,10 +701,10 @@
         #endregion
 
         private System.Windows.Forms.ErrorProvider Erroricono;
-        private System.Windows.Forms.TabControl TapGeneral;
+        private System.Windows.Forms.TabControl tabcontrol1;
         private System.Windows.Forms.TabPage TabGeneral;
-        private System.Windows.Forms.Button btnAnular;
-        private System.Windows.Forms.CheckBox chkSeleccionar;
+        private System.Windows.Forms.Button BtnAnular;
+        private System.Windows.Forms.CheckBox ChkSeleccionar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblTotal;
@@ -629,5 +746,14 @@
         private System.Windows.Forms.Button btnFiltrarArticulos;
         private System.Windows.Forms.TextBox txtBuscarArticulo;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel PanelMostrar;
+        private System.Windows.Forms.TextBox txtTotalD;
+        private System.Windows.Forms.TextBox txtTotalImpuestoD;
+        private System.Windows.Forms.TextBox txtSubTotalD;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView DgvMostrarDetalle;
     }
 }

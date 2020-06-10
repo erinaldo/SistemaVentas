@@ -72,18 +72,24 @@ namespace Sistema.Presentacion
         private void Limpiar()
         {
             txtBuscar.Clear();
-           
             txtId.Clear();
-           
-            btnInsertar.Visible = true;
-           
+            txtCodigo.Clear();
+            txtIdProveedor.Clear();
+            txtNombreProveedor.Clear();
+            txtSerieComprobante.Clear();
+            txtNumeroComprobante.Clear();
+            DtDetalle.Clear();
+            txtSubTotal.Text = "0.00";
+            txtTotalImpuesto.Text = "0.00";
+            txtTotal.Text = "0.00";
+
             Erroricono.Clear();
 
 
 
             DgvListado.Columns[0].Visible = false;// Para que la columna salga visible 
-            btnAnular.Visible = false;
-            chkSeleccionar.Checked = false;
+            BtnAnular.Visible = false;
+            ChkSeleccionar.Checked = false;
         }
         private void MensajeError(string Mensaje)
         {
@@ -283,7 +289,14 @@ namespace Sistema.Presentacion
 
         private void DgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            int IdArticulo;
+            string Codigo, Nombre;
+            decimal Precio;
+            IdArticulo = Convert.ToInt32(DgvArticulos.CurrentRow.Cells["ID"].Value);
+            Codigo = Convert.ToString(DgvArticulos.CurrentRow.Cells["Codigo"].Value);
+            Nombre = Convert.ToString(DgvArticulos.CurrentRow.Cells["Nombre"].Value);
+            Precio = Convert.ToDecimal(DgvArticulos.CurrentRow.Cells["Precio_Venta"].Value);
+            this.AgreagarDetalle(IdArticulo, Codigo, Nombre, Precio);
         }
 
         private void DgvDetalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -298,6 +311,154 @@ namespace Sistema.Presentacion
         private void DgvDetalle_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void DgvDetalle_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            this.CalcularTotales();
+        }
+
+        private void DgvDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BtnInsertar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string Rpta = "";
+                if (txtIdProveedor.Text == string.Empty || txtImpuesto.Text == string.Empty || txtNumeroComprobante.Text == string.Empty || DtDetalle.Rows.Count == 0)
+                {
+                    this.MensajeError("Falta ingresar algunos datos, serán remarcados.");
+                    Erroricono.SetError(txtIdProveedor, "Seleccione un proveedor.");
+                    Erroricono.SetError(txtImpuesto, "Ingrese un impuesto.");
+                    Erroricono.SetError(txtNumeroComprobante, "Ingrese el número del comprobante.");
+                    Erroricono.SetError(DgvDetalle, "Debe tener al menos un detalle.");
+                }
+                else
+                {
+                    Rpta = NIngreso.Insertar(Convert.ToInt32(txtIdProveedor.Text), Varriables.IdUsuario, CboComprobante.Text, txtSerieComprobante.Text.Trim(), txtNumeroComprobante .Text.Trim(), Convert.ToDecimal(txtImpuesto.Text), Convert.ToDecimal(txtTotal.Text), DtDetalle);
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOK("Se insertó de forma correcta el registro");
+                        this.Limpiar();
+                        this.Listar();
+                    }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DgvListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+                DgvMostrarDetalle.DataSource = NIngreso.ListarDetalle(Convert.ToInt32(DgvListado.CurrentRow.Cells["ID"].Value));
+                decimal Total, SubTotal;
+                decimal Impuesto = Convert.ToDecimal(DgvListado.CurrentRow.Cells["Impuesto"].Value);
+                Total = Convert.ToDecimal(DgvListado.CurrentRow.Cells["Total"].Value);
+                SubTotal = Total / (1 + Impuesto);
+                txtSubTotalD.Text = SubTotal.ToString("#0.00#");
+                txtTotalImpuestoD.Text = (Total - SubTotal).ToString("#0.00#");
+                txtTotalD.Text = Total.ToString("#0.00#");
+                PanelMostrar.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            PanelMostrar.Visible = false;
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Limpiar();
+            tabcontrol1.SelectedIndex = 0;
+        }
+
+        private void DgvListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == DgvListado.Columns["Seleccionar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)DgvListado.Rows[e.RowIndex].Cells["Seleccionar"];
+                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
+            }
+        }
+
+        private void ChkSeleccionar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChkSeleccionar.Checked)
+            {
+                DgvListado.Columns[0].Visible = true;
+                BtnAnular.Visible = true;
+            }
+            else
+            {
+                DgvListado.Columns[0].Visible = false;
+                BtnAnular.Visible = false;
+            }
+        }
+
+        private void BtnAnular_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Realmente deseas anular el(los) registro(s)?", "Sistema de ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
+                {
+                    int Codigo;
+                    string Rpta = "";
+
+                    foreach (DataGridViewRow row in DgvListado.Rows)
+                    {
+                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        {
+                            Codigo = Convert.ToInt32(row.Cells[1].Value);
+                            Rpta = NIngreso.Anular(Codigo);
+
+                            if (Rpta.Equals("OK"))
+                            {
+                                this.MensajeOK("Se anuló el registro: " + Convert.ToString(row.Cells[6].Value) + "-" + Convert.ToString(row.Cells[7].Value));
+                            }
+                            else
+                            {
+                                this.MensajeError(Rpta);
+                            }
+                        }
+                    }
+                    this.Listar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
     }
 }

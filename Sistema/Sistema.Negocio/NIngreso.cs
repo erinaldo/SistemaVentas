@@ -23,6 +23,7 @@ namespace Sistema.Negocio
             DIngreso Datos = new DIngreso();
             return Datos.Buscar(Valor);
         }
+       
         public static DataTable BuscarCodigo(string Valor)
         {
             DIngreso Datos = new DIngreso();

@@ -91,6 +91,7 @@ namespace Sistema.Datos
             }
         }
 
+      
         public string Insertar(Ingreso Obj)
         {
             string Rpta = "";
@@ -133,6 +134,7 @@ namespace Sistema.Datos
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@idingreso", SqlDbType.Int).Value = Id;
                 SqlCon.Open();
+                
                 Comando.ExecuteNonQuery();
                 Rpta = "OK";
             }
