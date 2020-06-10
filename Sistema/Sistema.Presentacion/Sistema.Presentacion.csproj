@@ -112,11 +112,23 @@
     <Compile Include="FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVenta.Designer.cs">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVenta_ProveedorIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVenta_ProveedorIngreso.Designer.cs">
       <DependentUpon>FrmVenta_ProveedorIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVista_Cliente_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVista_Cliente_Venta.Designer.cs">
+      <DependentUpon>FrmVista_Cliente_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,8 +163,14 @@
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmVenta.resx">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVenta_ProveedorIngreso.resx">
       <DependentUpon>FrmVenta_ProveedorIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVista_Cliente_Venta.resx">
+      <DependentUpon>FrmVista_Cliente_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

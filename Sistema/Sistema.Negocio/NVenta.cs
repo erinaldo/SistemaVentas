@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Sistema.Datos;
+using System.Data;
+using System.Data.SqlClient;
+using Sistema.Entidades;
+
+namespace Sistema.Negocio
+{
+   public class NVenta
+    {
+        public static DataTable Listar()
+        {
+            DVenta Datos = new DVenta();
+            return Datos.Listar();
+        }
+
+        public static DataTable Buscar(string Valor)
+        {
+            DVenta Datos = new DVenta();
+            return Datos.Buscar(Valor);
+        }
+       
+        public static DataTable BuscarCodigo(string Valor)
+        {
+            DVenta Datos = new DVenta();
+            return Datos.Buscar(Valor);
+        }
+
+        public static DataTable ListarDetalle(int Id)
+        {
+            DVenta Datos = new DVenta();
+            return Datos.ListarDetalle(Id);
+        }
+
+        public static string Insertar(int IdCliente, int IdUsuario, string TipoComprobante, string SerieComprobante, string NumComprobante, decimal Impuesto, decimal Total, DataTable Detalles)
+        {
+            DVenta Datos = new DVenta();
+            Venta Obj = new Venta();
+            Obj.IdCliente = IdCliente;
+            Obj.IdUsuario = IdUsuario;
+            Obj.TipoComprobante = TipoComprobante;
+            Obj.SerieComprobante = SerieComprobante;
+            Obj.NumComprobante = NumComprobante;
+            Obj.Impuesto = Impuesto;
+            Obj.Total = Total;
+            Obj.Detalles = Detalles;
+            return Datos.Insertar(Obj);
+        }
+        public static string Anular(int Id)
+        {
+            DVenta Datos = new DVenta();
+            return Datos.Anular(Id);
+        }
+
+    }
+}
