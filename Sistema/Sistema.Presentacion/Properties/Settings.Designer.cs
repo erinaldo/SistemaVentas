@@ -23,15 +23,14 @@ namespace Sistema.Presentacion.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LENOVO-PC;Initial Catalog=dbsistema;User ID=sa;Password=adrianespinal" +
+            "8297204399")]
         public string cn {
             get {
                 return ((string)(this["cn"]));
-            }
-            set {
-                this["cn"] = value;
             }
         }
     }
