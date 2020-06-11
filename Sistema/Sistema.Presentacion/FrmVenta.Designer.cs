@@ -330,6 +330,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // BtnAnular
             // 
@@ -339,6 +340,7 @@
             this.BtnAnular.TabIndex = 6;
             this.BtnAnular.Text = "Anular";
             this.BtnAnular.UseVisualStyleBackColor = true;
+            this.BtnAnular.Click += new System.EventHandler(this.BtnAnular_Click);
             // 
             // ChkSeleccionar
             // 
@@ -349,6 +351,7 @@
             this.ChkSeleccionar.TabIndex = 4;
             this.ChkSeleccionar.Text = "Seleccionar";
             this.ChkSeleccionar.UseVisualStyleBackColor = true;
+            this.ChkSeleccionar.CheckedChanged += new System.EventHandler(this.ChkSeleccionar_CheckedChanged);
             // 
             // btnBuscar
             // 
@@ -390,6 +393,8 @@
             this.DgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListado.Size = new System.Drawing.Size(971, 423);
             this.DgvListado.TabIndex = 0;
+            this.DgvListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellContentClick);
+            this.DgvListado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListado_CellDoubleClick);
             // 
             // TabGeneral
             // 
@@ -600,6 +605,7 @@
             this.DgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvDetalle.Size = new System.Drawing.Size(902, 219);
             this.DgvDetalle.TabIndex = 19;
+            this.DgvDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDetalle_CellEndEdit);
             // 
             // btnVerArticulo
             // 
@@ -636,6 +642,7 @@
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar ";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnInsertar
             // 
@@ -645,6 +652,7 @@
             this.btnInsertar.TabIndex = 5;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // Erroricono
             // 
