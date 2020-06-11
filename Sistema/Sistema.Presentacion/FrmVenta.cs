@@ -442,4 +442,19 @@ namespace Sistema.Presentacion
 
 
 }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Varriables.IdVenta = Convert.ToInt32(DgvListado.CurrentRow.Cells["ID"].Value);
+                Reportes.FrmReporteCompribanteVenta reporte = new Reportes.FrmReporteCompribanteVenta();
+                reporte.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
     } }
