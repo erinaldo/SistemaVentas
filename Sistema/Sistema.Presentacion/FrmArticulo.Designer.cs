@@ -67,6 +67,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btnreporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Erroricono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListado)).BeginInit();
@@ -383,6 +384,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnreporte);
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnDesactivar);
             this.tabPage1.Controls.Add(this.btnActivar);
@@ -447,6 +449,16 @@
             this.tabControl1.Size = new System.Drawing.Size(1161, 573);
             this.tabControl1.TabIndex = 1;
             // 
+            // btnreporte
+            // 
+            this.btnreporte.Location = new System.Drawing.Point(572, 26);
+            this.btnreporte.Name = "btnreporte";
+            this.btnreporte.Size = new System.Drawing.Size(75, 23);
+            this.btnreporte.TabIndex = 16;
+            this.btnreporte.Text = "Reporte";
+            this.btnreporte.UseVisualStyleBackColor = true;
+            this.btnreporte.Click += new System.EventHandler(this.Btnreporte_Click);
+            // 
             // FrmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,5 +521,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picImagen;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnreporte;
     }
 }

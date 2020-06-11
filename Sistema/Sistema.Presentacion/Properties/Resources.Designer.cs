@@ -73,6 +73,16 @@ namespace Sistema.Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_186577468_stock_illustration_blue_swoosh_global_digital_business {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_186577468-stock-illustration-blue-swoosh-global-digital-business", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);

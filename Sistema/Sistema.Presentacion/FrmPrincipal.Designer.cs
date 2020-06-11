@@ -57,22 +57,24 @@
             this.arrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.TsCompras = new System.Windows.Forms.ToolStripButton();
-            this.TsVentas = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.StBarrainferior = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TsCompras = new System.Windows.Forms.ToolStripButton();
+            this.TsVentas = new System.Windows.Forms.ToolStripButton();
+            this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -130,14 +132,14 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "&Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.ProveedoresToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.comprasToolStripMenuItem.Text = "&Compras";
             this.comprasToolStripMenuItem.Click += new System.EventHandler(this.ComprasToolStripMenuItem_Click);
             // 
@@ -153,14 +155,14 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clien&tes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.ClientesToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.ventasToolStripMenuItem1.Text = "&Ventas";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.VentasToolStripMenuItem1_Click);
             // 
@@ -303,22 +305,6 @@
             this.contentsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.contentsToolStripMenuItem.Text = "&Contenido";
             // 
-            // indexToolStripMenuItem
-            // 
-            this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
-            this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.indexToolStripMenuItem.Text = "&Índice";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
-            this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.searchToolStripMenuItem.Text = "&Buscar";
-            // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
@@ -360,6 +346,34 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StBarrainferior});
+            this.statusStrip.Location = new System.Drawing.Point(0, 591);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(1183, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // StBarrainferior
+            // 
+            this.StBarrainferior.Name = "StBarrainferior";
+            this.StBarrainferior.Size = new System.Drawing.Size(172, 17);
+            this.StBarrainferior.Text = "Desarrollado por Adrian Espinal";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Sistema.Presentacion.Properties.Resources.depositphotos_186577468_stock_illustration_blue_swoosh_global_digital_business;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1183, 542);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // TsCompras
             // 
             this.TsCompras.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -378,27 +392,29 @@
             this.TsVentas.Size = new System.Drawing.Size(23, 22);
             this.TsVentas.Text = "toolStripButton2";
             // 
-            // statusStrip
+            // indexToolStripMenuItem
             // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StBarrainferior});
-            this.statusStrip.Location = new System.Drawing.Point(0, 591);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1183, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
+            this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
+            this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
+            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.indexToolStripMenuItem.Text = "&Índice";
             // 
-            // StBarrainferior
+            // searchToolStripMenuItem
             // 
-            this.StBarrainferior.Name = "StBarrainferior";
-            this.StBarrainferior.Size = new System.Drawing.Size(172, 17);
-            this.StBarrainferior.Text = "Desarrollado por Adrian Espinal";
+            this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
+            this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.searchToolStripMenuItem.Text = "&Buscar";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1183, 613);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -414,6 +430,7 @@
             this.toolStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,6 +478,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton TsCompras;
         private System.Windows.Forms.ToolStripButton TsVentas;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
