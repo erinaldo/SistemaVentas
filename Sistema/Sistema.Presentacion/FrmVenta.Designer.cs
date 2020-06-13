@@ -60,6 +60,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.DgvListado = new System.Windows.Forms.DataGridView();
             this.TabGeneral = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabcontrol1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -84,7 +85,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.Erroricono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvMostrarDetalle)).BeginInit();
             this.PanelMostrar.SuspendLayout();
@@ -415,6 +415,16 @@
             this.TabGeneral.Text = "Listado";
             this.TabGeneral.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(551, 42);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Comprobante";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // tabcontrol1
             // 
             this.tabcontrol1.Controls.Add(this.TabGeneral);
@@ -607,6 +617,7 @@
             this.DgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvDetalle.Size = new System.Drawing.Size(902, 219);
             this.DgvDetalle.TabIndex = 19;
+            this.DgvDetalle.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDetalle_CellDoubleClick);
             this.DgvDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDetalle_CellEndEdit);
             // 
             // btnVerArticulo
@@ -659,16 +670,6 @@
             // Erroricono
             // 
             this.Erroricono.ContainerControl = this;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(551, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Comprobante";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // FrmVenta
             // 

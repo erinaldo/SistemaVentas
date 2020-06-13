@@ -66,7 +66,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.StBarrainferior = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TsCompras = new System.Windows.Forms.ToolStripButton();
             this.TsVentas = new System.Windows.Forms.ToolStripButton();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +73,6 @@
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -201,13 +199,14 @@
             // consultaVentasToolStripMenuItem
             // 
             this.consultaVentasToolStripMenuItem.Name = "consultaVentasToolStripMenuItem";
-            this.consultaVentasToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.consultaVentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaVentasToolStripMenuItem.Text = "Consulta Ventas";
+            this.consultaVentasToolStripMenuItem.Click += new System.EventHandler(this.ConsultaVentasToolStripMenuItem_Click);
             // 
             // consultaComprasToolStripMenuItem
             // 
             this.consultaComprasToolStripMenuItem.Name = "consultaComprasToolStripMenuItem";
-            this.consultaComprasToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.consultaComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaComprasToolStripMenuItem.Text = "Consulta Compras";
             // 
             // viewMenu
@@ -362,18 +361,6 @@
             this.StBarrainferior.Size = new System.Drawing.Size(172, 17);
             this.StBarrainferior.Text = "Desarrollado por Adrian Espinal";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Sistema.Presentacion.Properties.Resources.depositphotos_186577468_stock_illustration_blue_swoosh_global_digital_business;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1183, 542);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // TsCompras
             // 
             this.TsCompras.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -414,7 +401,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1183, 613);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -430,7 +416,6 @@
             this.toolStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,7 +463,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton TsCompras;
         private System.Windows.Forms.ToolStripButton TsVentas;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

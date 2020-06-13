@@ -23,7 +23,11 @@ namespace Sistema.Negocio
             DVenta Datos = new DVenta();
             return Datos.Buscar(Valor);
         }
-       
+        public static DataTable ConsultaFechas(DateTime FechaInicio, DateTime FechaFin)
+        {
+            DVenta Datos = new DVenta();
+            return Datos.ConsultasFechas(FechaInicio, FechaFin);
+        }
         public static DataTable BuscarCodigo(string Valor)
         {
             DVenta Datos = new DVenta();

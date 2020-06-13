@@ -457,4 +457,9 @@ namespace Sistema.Presentacion
                 throw;
             }
         }
+
+        private void DgvDetalle_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     } }
