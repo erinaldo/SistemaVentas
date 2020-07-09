@@ -145,7 +145,8 @@
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.Size = new System.Drawing.Size(76, 20);
             this.txtImpuesto.TabIndex = 15;
-            this.txtImpuesto.Text = "0.18";
+            this.txtImpuesto.Text = "0";
+            this.txtImpuesto.TextChanged += new System.EventHandler(this.TxtImpuesto_TextChanged);
             // 
             // label4
             // 
@@ -155,6 +156,7 @@
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Impuesto(*)";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // CboComprobante
             // 

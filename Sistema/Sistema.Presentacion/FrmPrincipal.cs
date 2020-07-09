@@ -250,5 +250,12 @@ namespace Sistema.Presentacion
                  frm.MdiParent = this;
                   frm.Show();
         }
+
+        private void ConsultaComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultas_Compra_Fechas frm = new FrmConsultas_Compra_Fechas();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

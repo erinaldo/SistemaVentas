@@ -1,0 +1,19 @@
+﻿1>------ Operación Compilar iniciada: proyecto: Sistema.Entidades, configuración: Debug Any CPU ------
+1>  Sistema.Entidades -> C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Entidades\bin\Debug\Sistema.Entidades.dll
+2>------ Operación Compilar iniciada: proyecto: Sistema.Datos, configuración: Debug Any CPU ------
+2>  Sistema.Datos -> C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Datos\bin\Debug\Sistema.Datos.dll
+3>------ Operación Compilar iniciada: proyecto: Sistema.Negocio, configuración: Debug Any CPU ------
+3>  Sistema.Negocio -> C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Negocio\bin\Debug\Sistema.Negocio.dll
+4>------ Operación Compilar iniciada: proyecto: Sistema.Presentacion, configuración: Debug Any CPU ------
+4>C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Presentacion\FrmCliente.cs(11,7,11,18): warning CS0105: La directiva using para 'System.Data' aparece previamente en este espacio de nombres
+4>C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Presentacion\FrmProveedor.cs(11,7,11,18): warning CS0105: La directiva using para 'System.Data' aparece previamente en este espacio de nombres
+4>C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Presentacion\FrmCategoria.cs(213,30,213,32): warning CS0168: La variable 'ex' se ha declarado pero nunca se usa
+4>  Sistema.Presentacion -> C:\Users\USER\source\repos\SistemaVentas\Sistema\Sistema.Presentacion\bin\Debug\Sistema.Presentacion.exe
+Compilando Sistema.Presentacion...
+5>------ Publicación iniciada: proyecto: Sistema.Presentacion, configuración: Debug Any CPU ------
+Conectando con 'C:\Users\USER\source\repos\SistemaVentas\BD\Instalador\'...
+Publicando archivos...
+Publicación correcta.
+C:\Users\USER\source\repos\SistemaVentas\BD\Instalador\
+========== Compilar: 4 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+========== Publicación: 1 procesados, 0 no procesados, 0 omitidos ==========

@@ -359,9 +359,9 @@ namespace Sistema.Presentacion
             {
                 DgvMostrarDetalle.DataSource = NVenta.ListarDetalle(Convert.ToInt32(DgvListado.CurrentRow.Cells["ID"].Value));
                 decimal Total, SubTotal;
-                decimal Impuesto = Convert.ToDecimal(DgvListado.CurrentRow.Cells["Impuesto"].Value);
+                //decimal Impuesto = Convert.ToDecimal(DgvListado.CurrentRow.Cells["Impuesto"].Value);
                 Total = Convert.ToDecimal(DgvListado.CurrentRow.Cells["Total"].Value);
-                SubTotal = Total / (1 + Impuesto);
+                SubTotal = Total ;
                 txtSubTotalD.Text = SubTotal.ToString("#0.00#");
                 txtTotalImpuestoD.Text = (Total - SubTotal).ToString("#0.00#");
                 txtTotalD.Text = Total.ToString("#0.00#");
@@ -459,6 +459,16 @@ namespace Sistema.Presentacion
         }
 
         private void DgvDetalle_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtImpuesto_TextChanged(object sender, EventArgs e)
         {
 
         }

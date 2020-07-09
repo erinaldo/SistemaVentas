@@ -127,5 +127,10 @@ namespace Sistema.Presentacion
         {
             PanelMostrar.Visible = false;
         }
+
+        private void DtpFechaFin_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

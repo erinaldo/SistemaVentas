@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.TabGeneral = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.DtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.PanelMostrar = new System.Windows.Forms.Panel();
             this.txtTotalD = new System.Windows.Forms.TextBox();
@@ -46,10 +50,6 @@
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabcontrol1 = new System.Windows.Forms.TabControl();
             this.Erroricono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.DtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.DtpFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.TabGeneral.SuspendLayout();
             this.PanelMostrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvMostrarDetalle)).BeginInit();
@@ -76,6 +76,41 @@
             this.TabGeneral.TabIndex = 0;
             this.TabGeneral.Text = "Listado";
             this.TabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(258, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Hasta";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Desde";
+            // 
+            // DtpFechaFin
+            // 
+            this.DtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpFechaFin.Location = new System.Drawing.Point(314, 47);
+            this.DtpFechaFin.Name = "DtpFechaFin";
+            this.DtpFechaFin.Size = new System.Drawing.Size(200, 20);
+            this.DtpFechaFin.TabIndex = 10;
+            this.DtpFechaFin.ValueChanged += new System.EventHandler(this.DtpFechaFin_ValueChanged);
+            // 
+            // DtpFechaInicio
+            // 
+            this.DtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpFechaInicio.Location = new System.Drawing.Point(52, 47);
+            this.DtpFechaInicio.Name = "DtpFechaInicio";
+            this.DtpFechaInicio.Size = new System.Drawing.Size(200, 20);
+            this.DtpFechaInicio.TabIndex = 9;
             // 
             // button2
             // 
@@ -232,40 +267,6 @@
             // Erroricono
             // 
             this.Erroricono.ContainerControl = this;
-            // 
-            // DtpFechaInicio
-            // 
-            this.DtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFechaInicio.Location = new System.Drawing.Point(52, 47);
-            this.DtpFechaInicio.Name = "DtpFechaInicio";
-            this.DtpFechaInicio.Size = new System.Drawing.Size(200, 20);
-            this.DtpFechaInicio.TabIndex = 9;
-            // 
-            // DtpFechaFin
-            // 
-            this.DtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpFechaFin.Location = new System.Drawing.Point(314, 47);
-            this.DtpFechaFin.Name = "DtpFechaFin";
-            this.DtpFechaFin.Size = new System.Drawing.Size(200, 20);
-            this.DtpFechaFin.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Desde";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Hasta";
             // 
             // FrmConsultas_VentasFechas
             // 
