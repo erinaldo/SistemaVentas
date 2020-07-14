@@ -351,7 +351,7 @@
             this.ClientSize = new System.Drawing.Size(914, 581);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmCliente";
-            this.Text = "Proveedores";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.tabControl1.ResumeLayout(false);
             this.TabGeneral.ResumeLayout(false);

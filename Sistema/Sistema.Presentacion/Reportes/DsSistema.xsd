@@ -36,7 +36,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="venta_comprobanteTableAdapter" GeneratorDataComponentClassName="venta_comprobanteTableAdapter" Name="venta_comprobante" UserDataComponentName="venta_comprobanteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="cn (Settings)" DbObjectName="dbsistema.dbo.venta_comprobante" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="cn (Settings)" DbObjectName="dbsistema.dbo.venta_comprobante" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.venta_comprobante</CommandText>
@@ -65,6 +65,7 @@
               <Mapping SourceColumn="precio" DataSetColumn="precio" />
               <Mapping SourceColumn="descuento" DataSetColumn="descuento" />
               <Mapping SourceColumn="importe" DataSetColumn="importe" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -76,7 +77,7 @@
   <xs:element name="DsSistema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsSistema" msprop:Generator_UserDSName="DsSistema">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="articulo_listar" msprop:Generator_TableClassName="articulo_listarDataTable" msprop:Generator_TableVarName="tablearticulo_listar" msprop:Generator_TablePropName="articulo_listar" msprop:Generator_RowDeletingName="articulo_listarRowDeleting" msprop:Generator_RowChangingName="articulo_listarRowChanging" msprop:Generator_RowEvHandlerName="articulo_listarRowChangeEventHandler" msprop:Generator_RowDeletedName="articulo_listarRowDeleted" msprop:Generator_UserTableName="articulo_listar" msprop:Generator_RowChangedName="articulo_listarRowChanged" msprop:Generator_RowEvArgName="articulo_listarRowChangeEvent" msprop:Generator_RowClassName="articulo_listarRow">
+        <xs:element name="articulo_listar" msprop:Generator_TableClassName="articulo_listarDataTable" msprop:Generator_TableVarName="tablearticulo_listar" msprop:Generator_RowChangedName="articulo_listarRowChanged" msprop:Generator_TablePropName="articulo_listar" msprop:Generator_RowDeletingName="articulo_listarRowDeleting" msprop:Generator_RowChangingName="articulo_listarRowChanging" msprop:Generator_RowEvHandlerName="articulo_listarRowChangeEventHandler" msprop:Generator_RowDeletedName="articulo_listarRowDeleted" msprop:Generator_RowClassName="articulo_listarRow" msprop:Generator_UserTableName="articulo_listar" msprop:Generator_RowEvArgName="articulo_listarRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -122,7 +123,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="venta_comprobante" msprop:Generator_TableClassName="venta_comprobanteDataTable" msprop:Generator_TableVarName="tableventa_comprobante" msprop:Generator_TablePropName="venta_comprobante" msprop:Generator_RowDeletingName="venta_comprobanteRowDeleting" msprop:Generator_RowChangingName="venta_comprobanteRowChanging" msprop:Generator_RowEvHandlerName="venta_comprobanteRowChangeEventHandler" msprop:Generator_RowDeletedName="venta_comprobanteRowDeleted" msprop:Generator_UserTableName="venta_comprobante" msprop:Generator_RowChangedName="venta_comprobanteRowChanged" msprop:Generator_RowEvArgName="venta_comprobanteRowChangeEvent" msprop:Generator_RowClassName="venta_comprobanteRow">
+        <xs:element name="venta_comprobante" msprop:Generator_TableClassName="venta_comprobanteDataTable" msprop:Generator_TableVarName="tableventa_comprobante" msprop:Generator_RowChangedName="venta_comprobanteRowChanged" msprop:Generator_TablePropName="venta_comprobante" msprop:Generator_RowDeletingName="venta_comprobanteRowDeleting" msprop:Generator_RowChangingName="venta_comprobanteRowChanging" msprop:Generator_RowEvHandlerName="venta_comprobanteRowChangeEventHandler" msprop:Generator_RowDeletedName="venta_comprobanteRowDeleted" msprop:Generator_RowClassName="venta_comprobanteRow" msprop:Generator_UserTableName="venta_comprobante" msprop:Generator_RowEvArgName="venta_comprobanteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente">
@@ -195,6 +196,13 @@
               <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
               <xs:element name="descuento" msprop:Generator_ColumnVarNameInTable="columndescuento" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_UserColumnName="descuento" type="xs:decimal" />
               <xs:element name="importe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnPropNameInTable="importeColumn" msprop:Generator_UserColumnName="importe" type="xs:decimal" minOccurs="0" />
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
