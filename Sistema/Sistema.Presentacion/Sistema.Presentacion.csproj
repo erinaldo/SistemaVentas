@@ -205,17 +205,17 @@
     <Compile Include="Reportes\FrmReporteArticulos.Designer.cs">
       <DependentUpon>FrmReporteArticulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\FrmReporteCompribanteVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\FrmReporteCompribanteVenta.Designer.cs">
-      <DependentUpon>FrmReporteCompribanteVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\FrmReporteComprobanteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\FrmReporteComprobanteVentas.Designer.cs">
       <DependentUpon>FrmReporteComprobanteVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteVenta.Designer.cs">
+      <DependentUpon>ReporteVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Varriables.cs" />
@@ -278,15 +278,15 @@
     <EmbeddedResource Include="Reportes\FrmReporteArticulos.resx">
       <DependentUpon>FrmReporteArticulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\FrmReporteCompribanteVenta.resx">
-      <DependentUpon>FrmReporteCompribanteVenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReporteComprobanteVentas.resx">
       <DependentUpon>FrmReporteComprobanteVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteVenta.resx">
+      <DependentUpon>ReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptArticulos.rdlc" />
-    <EmbeddedResource Include="Reportes\RptComprobanteVEnta.rdlc" />
     <EmbeddedResource Include="Reportes\RptComprobanteVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\Venta.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

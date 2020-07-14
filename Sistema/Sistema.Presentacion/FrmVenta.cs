@@ -448,7 +448,7 @@ namespace Sistema.Presentacion
             try
             {
                 Varriables.IdVenta = Convert.ToInt32(DgvListado.CurrentRow.Cells["ID"].Value);
-                Reportes.FrmReporteComprobanteVentas reporte = new Reportes.FrmReporteComprobanteVentas();                
+                Reportes.ReporteVenta reporte = new Reportes.ReporteVenta();                
                 reporte.ShowDialog();
             }
             catch (Exception ex)
