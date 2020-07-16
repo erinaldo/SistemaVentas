@@ -244,7 +244,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>codigo</rd:DefaultName>
@@ -304,7 +306,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>cantidad</rd:DefaultName>
@@ -334,7 +338,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>precio</rd:DefaultName>
@@ -364,7 +370,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>impuesto</rd:DefaultName>
@@ -394,7 +402,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>importe</rd:DefaultName>
@@ -438,8 +448,8 @@
         <DataSetName>DsVenta</DataSetName>
         <Top>0.46078cm</Top>
         <Left>0.28787cm</Left>
-        <Height>1.35875cm</Height>
-        <Width>19.25701cm</Width>
+        <Height>1.35876cm</Height>
+        <Width>19.25702cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -662,6 +672,39 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Garantia: 6 Meses, (NO APLICA EN CASO DE DAÑOS FISICOS). </Value>
+                <Style>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>2.53062cm</Top>
+        <Left>0.28787cm</Left>
+        <Height>0.6cm</Height>
+        <Width>12.00318cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2.60417in</Height>
     <Style />
@@ -698,6 +741,7 @@
                   <Style>
                     <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
+                    <Color>RoyalBlue</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -710,6 +754,7 @@
                   <Style>
                     <FontSize>14pt</FontSize>
                     <FontWeight>Bold</FontWeight>
+                    <Color>RoyalBlue</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -719,8 +764,8 @@
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.36724cm</Top>
           <Left>3.82926cm</Left>
-          <Height>0.89104cm</Height>
-          <Width>6.07188cm</Width>
+          <Height>0.71465cm</Height>
+          <Width>6.10715cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -749,7 +794,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.25828cm</Top>
+          <Top>1.15245cm</Top>
           <Left>3.82926cm</Left>
           <Height>0.6cm</Height>
           <Width>6.10715cm</Width>
@@ -790,7 +835,7 @@
           <Style>
             <Border>
               <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -823,7 +868,7 @@
           <Style>
             <Border>
               <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -856,7 +901,7 @@
           <Style>
             <Border>
               <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
