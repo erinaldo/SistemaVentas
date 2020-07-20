@@ -165,7 +165,8 @@
             "FACTURA",
             "BOLETA ",
             "TICKET",
-            "GUIA"});
+            "GUIA",
+            "COTIZACION"});
             this.CboComprobante.Location = new System.Drawing.Point(81, 81);
             this.CboComprobante.Name = "CboComprobante";
             this.CboComprobante.Size = new System.Drawing.Size(121, 21);
